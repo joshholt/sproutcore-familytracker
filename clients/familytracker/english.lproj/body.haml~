@@ -22,18 +22,18 @@
                       :bind => {:content => "Familytracker.contactListController.arrangedObjects",:selection => "Familytracker.contactListController.selection"} |
           = split_divider_view
           - view :contact_form do
-            - form_view :tag => "table", :class => "form", :bind => {:content => "Familytracker.contactEditController.content"} do
+            - form_view :tag => "table", :class => "form", :bind => {:content => "Familytracker.contactListController.selection"} do
               %tr
                 %td{:class => "label"}= "First Name:"
-                %td{:class => "value"}= text_field_view :field => :first_name , :hint => "First Name"
+                %td{:class => "value"}= text_field_view  :hint => "First Name", :field => :first_name
               %tr
                 %td{:class => "label"}= "Last Name:"
-                %td{:class => "value"}= text_field_view :field => :last_name , :hint => "Last Name"
+                %td{:class => "value"}= text_field_view :hint => "Last Name", :field => :last_name
               %tr
                 %td{:class => "label"}= "Address:"
-                %td{:class => "value"}= text_area_view :field => :address , :hint => "address"
+                %td{:class => "value"}= text_area_view :hint => "address", :field => :address
               %tr
                 %td{:class => "label"}= "Phone Number:"
-                %td{:class => "value"}= text_field_view :field => :phone_number , :hint => "Phone Number"
+                %td{:class => "value"}= text_field_view :hint => "Phone Number", :field => :phone_number
               %tr
-                %td{:class => "form_buttons"}= button_view :title => "Save Changes", :default => true, :action => 'Familytracker.contactEditController.commitChanges', :bind => {:enabled => "Familytracker.contactEditController.hasChanges"}
+                %td{:class => "form_buttons"}= button_view :title => "Save Changes", :default => true, :action => 'Familytracker.contactListController.commitChanges', :bind => {:enabled => "Familytracker.contactListController.hasChanges"}
