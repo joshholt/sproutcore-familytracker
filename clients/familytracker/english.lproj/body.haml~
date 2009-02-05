@@ -1,0 +1,39 @@
+- content_for("body") do
+  - view :app_container do
+    - split_view :workspace, :class => "sc-app-workspace", :direction => :horizontal do
+      - view :sidebar, :can_collapse => false, :min_thickness => 150, :max_thickness => 150 do
+        - scroll_view :family_list_scroll_view do
+          = source_list_view :family_list, :is_editable => false,       | 
+                             :content_unread_count_key => 'members',    |
+                             :content_value_key => "familyName",        |
+                             :bind => {:content => "Familytracker.familyListController.arrangedObjects",:selection => "Familytracker.familyListController.selection"} |
+      = split_divider_view
+      - view :main_content do
+        - split_view :actionArea, :class => "contact-workspace", :direction => :vertical do
+          - view :contacts, :can_collapse => false, :min_thickness => 200, :max_thickness => 200 do
+            - scroll_view :contact_scroll_view do
+              = grid_view :contact_list_view,                               |
+                      :is_editable => false,                            |
+                      :content_value_editable => false,                 |
+                      :can_reorder_content => true,                     |
+                      :example_view => 'Familytracker.ContactCardView', |
+                      :row_height => 200,                               |
+                      :column_width => 300,                             | 
+                      :bind => {:content => "Familytracker.contactListController.arrangedObjects",:selection => "Familytracker.contactListController.selection"} |
+          = split_divider_view
+          - view :contact_form do
+            - form_view :tag => "table", :class => "form", :bind => {:content => "Familytracker.contactEditController.content"} do
+              %tr
+                %td{:class => "label"}= "First Name:"
+                %td{:class => "value"}= text_field_view :field => :first_name , :hint => "First Name"
+              %tr
+                %td{:class => "label"}= "Last Name:"
+                %td{:class => "value"}= text_field_view :field => :last_name , :hint => "Last Name"
+              %tr
+                %td{:class => "label"}= "Address:"
+                %td{:class => "value"}= text_area_view :field => :address , :hint => "address"
+              %tr
+                %td{:class => "label"}= "Phone Number:"
+                %td{:class => "value"}= text_field_view :field => :phone_number , :hint => "Phone Number"
+              %tr
+                %td{:class => "form_buttons"}= button_view :title => "Save Changes", :default => true, :action => 'Familytracker.contactEditController.commitChanges', :bind => {:enabled => "Familytracker.contactEditController.hasChanges"}

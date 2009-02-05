@@ -1,0 +1,21 @@
+// ==========================================================================
+// Familytracker.ContactListController
+// ==========================================================================
+
+require('core');
+
+/** @class
+
+  (Document Your View Here)
+
+  @extends SC.CollectionController
+  @author AuthorName
+  @version 0.1
+  @static
+*/
+Familytracker.contactListController = SC.CollectionController.create(
+/** @scope Familytracker.contactListController */ {
+  //useControllersForContent: NO,
+  
+  contentBinding: 'Familytracker.contactDetailController.contacts'
+}) ;
