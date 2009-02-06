@@ -15,7 +15,8 @@ function main() {
   // The default code here will load the fixtures you have defined.
   // Comment out the preload line and add something to refresh from the server
   // when you are ready to pull data from your server.
-  Familytracker.server.preload(Familytracker.FIXTURES) ;
+  Familytracker.server.preload(Familytracker.FIXTURES);
+  var families = Familytracker.Family.findAll();
 
   // Step 2: Instantiate Your Views
   // The default code just activates all the views you have on the page. If
@@ -25,7 +26,6 @@ function main() {
 
   // Step 3. Set the content property on your primary controller.
   // This will make your app come alive!
-  var families = Familytracker.Family.collection();
-  Familytracker.familyListController.set('content',families);
-  families.refresh();
+  
+  Familytracker.masterController.set('content',families);
 } ;

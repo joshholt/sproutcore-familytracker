@@ -12,48 +12,48 @@ Familytracker.FIXTURES = Familytracker.FIXTURES.concat([
     type: 'Contact',
     firstName: "Tony",
     lastName: "Jarman",
-    familyList: 1,
-    address: "Some Road.<br/> Some City, SomeState SomeZip USA"
+    address: "Some Road.<br/> Some City, SomeState SomeZip USA",
+    familyList: 1
   },
   
   { guid: 2,
     type: 'Contact',
     firstName: "Harriet",
     lastName: "Jarman",
-    familyList: 1,
-    address: "Some Road.<br/> Some City, SomeState SomeZip USA"
+    address: "Some Road.<br/> Some City, SomeState SomeZip USA",
+    familyList: 1
   },
   
   { guid: 3,
     type: 'Contact',
     firstName: "Christy",
     lastName: "Jarman",
-    familyList: 1,
-    address: "Some Road.<br/> Some City, SomeState SomeZip USA"
+    address: "Some Road.<br/> Some City, SomeState SomeZip USA",
+    familyList: 1
   },
   
   { guid: 4,
     type: 'Contact',
     firstName: "Kyrstan",
     lastName: "Jarman",
-    familyList: 1,
-    address: "Some Road.<br/> Some City, SomeState SomeZip USA"
+    address: "Some Road.<br/> Some City, SomeState SomeZip USA",
+    familyList: 1
   },
   
   { guid: 5,
     type: 'Contact',
     firstName: "Melissa",
     lastName: "Jarman",
-    familyList: 1,
-    address: "Some Road.<br/> Some City, SomeState SomeZip USA"
+    address: "Some Road.<br/> Some City, SomeState SomeZip USA",
+    familyList: 1
   },
   
   { guid: 6,
     type: 'Contact',
     firstName: "Andrea",
     lastName: "Jarman",
-    familyList: 1,
-    address: "Some Road.<br/> Some City, SomeState SomeZip USA"
+    address: "Some Road.<br/> Some City, SomeState SomeZip USA",
+    familyList: 1
   },
   
   // The Holt Family
@@ -62,8 +62,8 @@ Familytracker.FIXTURES = Familytracker.FIXTURES.concat([
     type: 'Contact',
     firstName: "Josh",
     lastName: "Holt",
-    familyList: 3,
-    address: "Some Road.<br/> Some City, SomeState SomeZip USA"
-  },
+    address: "Some Road.<br/> Some City, SomeState SomeZip USA",
+    familyList: 3
+  }
   
 ]);

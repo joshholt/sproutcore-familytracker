@@ -14,11 +14,21 @@ require('core');
 */
 Familytracker.Family = SC.Record.extend(
 /** @scope Familytracker.Family.prototype */ {
-
-  properties: ['guid','familyName'],
-  contacts: SC.Record.hasMany('Familytracker.Contact','familyList'),
+  
+  
+  contactsType: 'Familytracker.Contact',
+  
+  contacts: function() {
+    var this_fams_contacts = Familytracker.Contact.findAll({'familyList': this.get('guid')});
+    return this_fams_contacts._reverse();
+  }.property('contacts'),
+  
   members: function() {
-    return this.get('contacts').count();
-  }.property('members')
+      return this.get('contacts').get('length');
+  }.property('members'),
+  
+  countChanged: function(){
+    return this.set('members',this.get('contacts').get('length'));
+  }.observes('contacts.length')
 
-}) ;
+});

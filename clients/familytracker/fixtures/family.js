@@ -12,16 +12,16 @@ Familytracker.FIXTURES = Familytracker.FIXTURES.concat([
 
   { guid: 1,
     type: 'Family',
-    familyName: "Jarman"
+    name: "Jarman"
   },
   
   { guid: 2,
     type: 'Family',
-    familyName: "Tice"
+    name: "Tice"
   },
   
   { guid: 3,
     type: 'Family',
-    familyName: "Holt"
-  },
+    name: "Holt"
+  }
 ]);

@@ -14,6 +14,5 @@ require('core');
 */
 Familytracker.Contact = SC.Record.extend(
 /** @scope Familytracker.Contact.prototype */ {
-  properties: ['guid','firstName','lastName', 'address','phoneNumber'],
   familyListType: 'Familytracker.Family'
 }) ;
