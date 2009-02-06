@@ -1,3 +1,5 @@
+/* Start ----------------------------------------------------- controllers/contact_list.js*/
+
 // ==========================================================================
 // Familytracker.ContactListController
 // ==========================================================================
@@ -21,3 +23,7 @@ Familytracker.contactListController = SC.CollectionController.create(
   allowsMultipleSelectoin: false,
   contentBinding: 'Familytracker.contactDetailController.contacts'
 }) ;
+
+
+/* End ------------------------------------------------------- controllers/contact_list.js*/
+
