@@ -10,7 +10,7 @@
       = split_divider_view
       - view :main_content do
         - split_view :actionArea, :class => "contact-workspace", :direction => :vertical do
-          - view :contacts, :can_collapse => false, :min_thickness => 200, :max_thickness => 200 do
+          - view :contacts, :can_collapse => false, :min_thickness => 200, :max_thickness => 400 do
             - scroll_view :contact_scroll_view do
               = grid_view :contact_list_view,                               |
                       :is_editable => false,                            |
