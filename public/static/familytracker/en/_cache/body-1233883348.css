@@ -1,3 +1,5 @@
+/* Start ----------------------------------------------------- body.css*/
+
 body.sc-theme { background: #555; margin:0; }
 
 .app_container {
@@ -61,8 +63,7 @@ body.sc-theme { background: #555; margin:0; }
   top:0;
   right:0;
   border: none;
-  /*height: 200px;*/
-  bottom:0;
+  height: 200px;
 }
 
 .main_content .sc-grid-view {
@@ -107,3 +108,7 @@ body.sc-theme { background: #555; margin:0; }
   height:3px;
   top:200px;
 }
+
+
+/* End ------------------------------------------------------- body.css*/
+
